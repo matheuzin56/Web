@@ -1,0 +1,146 @@
+
+:root {
+  color-scheme: dark;
+  --ink: #ECCBAB;
+  --muted: #ECCBAB;
+  --paper: #22373B;
+  --surface: #14110E;
+  --accent: #9A7138;
+  --line: #9A7138;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+header,
+nav,
+main,
+footer {
+  width: min(100% - 2rem, 66rem);
+  margin-inline: auto;
+}
+
+header {
+  padding-block: 3.5rem 2rem;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+}
+
+h1 {
+  max-width: 18ch;
+  margin-bottom: 0.75rem;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.1;
+}
+
+h2 {
+  line-height: 1.2;
+}
+
+nav {
+  border-block: 1px solid var(--line);
+  padding-block: 0.8rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+a {
+  text-underline-offset: 0.18em;
+  color:#9A7138
+}
+
+a:hover {
+ color: #9A7138
+}
+
+a:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.destacado {
+  background: var(--surface); /* Fai que o fondo do destacado quede coa cor #14110E para que quede maiss bonito */
+  border-left: 6px solid var(--accent); /* fai unha especie de borde para destacar mais o destacado */
+  padding: 1rem 1.25rem; /* deixamos que haxa un espacio no destacado para ser mais facil de ler */
+  
+}
+
+figure {
+  margin: 2rem 0 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.85rem;
+}
+
+footer {
+  margin-top: 1rem;
+  border-top: 1px solid var(--line);
+  padding-block: 1.25rem 2rem;
+  color: var(--muted);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.9rem;
+}
+
+
+@media (max-width: 700px) {
+  .recomendacions {
+    grid-template-columns: 1fr;
+  }
+}
+
+.recomendacions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.recomendacions h2 {
+  flex: 0 0 100%;
+  margin-bottom: 0;
+}
+
+.recomendacions article {
+  flex: 1 1 16rem;  
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+}
+
+.recomendacions article h3 {
+  margin-top: 0;
+}
